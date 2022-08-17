@@ -15,8 +15,8 @@ void Z47()
 
   double[,] array = new double[m, n];
 
-  CreateArrayDouble(array);
-  WriteArray(array);
+  CreateArrayDouble(array, m, n);
+  WriteArray(array, m, n);
 
   Console.WriteLine();
 }
@@ -36,8 +36,8 @@ void Z50()
   Console.WriteLine($"m = {m}, n = {n}.");
 
   int[,] array = new int[m, n];
-  CreateArrayInt(array);
-  WriteArrayInt(array);
+  CreateArrayInt(array, m, n);
+  WriteArrayInt(array, m, n);
   if(x <= m && y <= n && x >= 0 && y >= 0 )
   {
     int result = array[x - 1  , y -1 ];
@@ -56,8 +56,8 @@ void Z52()
 
   int[,] array = new int[m, n];
 
-  CreateArrayInt(array);
-  WriteArrayInt(array);
+  CreateArrayInt(array, m, n);
+  WriteArrayInt(array, m, n);
 
   for (int i = 0; i < n; i++)
   {
@@ -71,8 +71,7 @@ void Z52()
   }
 }
 
-
-void CreateArrayInt(int[,] array)
+void CreateArrayInt(int[,] array, int m, int n)
 {
   for (int i = 0; i < m; i++)
   {
@@ -83,7 +82,7 @@ void CreateArrayInt(int[,] array)
   }
 }
 
-void WriteArrayInt (int[,] array)
+void WriteArrayInt (int[,] array, int m, int n)
 {
 for (int i = 0; i < m; i++)
   {
@@ -96,7 +95,7 @@ for (int i = 0; i < m; i++)
   }
 }
 
-void CreateArrayDouble(double[,] array)
+void CreateArrayDouble(double[,] array, int m, int n)
 {
   for (int i = 0; i < m; i++)
   {
@@ -106,7 +105,8 @@ void CreateArrayDouble(double[,] array)
     }
   }
 }
- void WriteArray (double[,] array){
+ void WriteArray (double[,] array, int m, int n)
+ {
 for (int i = 0; i < m; i++)
   {
       for (int j = 0; j < n; j++)
@@ -119,6 +119,6 @@ for (int i = 0; i < m; i++)
 }
 
 
-// Z47()
-// Z50()
-// Z52()
+Z47();
+Z50();
+Z52();
